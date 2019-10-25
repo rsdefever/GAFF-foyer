@@ -1,0 +1,90 @@
+<Smarts>
+  <Definition name="c" class="c" def="[C;X3][O&amp;X1,S&amp;X1]" overrides="c2,cc_r5,cc_r6,ce,cv,ca" desc="Sp2 C carbonyl group" doi="10.1002/jcc/20035"/> 
+  <Definition name="c1" class="c1" def="[C;X2]" desc="Sp C" doi="10.1002/jcc/20035"/>
+  <Definition name="c2" class="c2" def="[C;X3]" desc="Sp2 C" doi="10.1002/jcc/20035"/>
+  <Definition name="c3" class="c3" def="[C;X4]" desc="Sp3 C" doi="10.1002/jcc/20035"/>
+  <Definition name="ca" class="ca" def="[C;X3;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1" overrides="ce,cc_r5,cc_r6,c2,cz" desc="Sp2 C in pure aromatic systems" doi="10.1002/jcc/20035"/>
+  <Definition name="cp" class="cp" def="[C;X3;r6;R1]([C;X3;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1)([C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5][C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5])[C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5][C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5]" overrides="ca,cc_r5,cc_r6" desc="Head Sp2 C that connect two rings in biphenyl sys." doi="10.1002/jcc/20035"/>
+  <Definition name="cq" class="cq" desc="Head Sp2 C that connect two rings in biphenyl sys. identical to cp" doi="10.1002/jcc/20035"/>
+  <Definition name="cc_r5" class="cc" def="[C;X3;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ce,c2,cz" desc="Sp2 carbons in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
+  <Definition name="cc_r6" class="cc" def="[C;X3;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ce,c2,cz,cc_r5" desc="Sp2 carbons in non-pure aromatic systems" doi="10.1002/jcc/20035"/> 
+  <Definition name="cd" class="cd" desc="Sp2 carbons in non-pure aromatic systems, identical to cc" doi="10.1002/jcc/20035"/>
+  <Definition name="ce" class="ce" def="[C;X3]([C&amp;X3,C&amp;X2,N&amp;X2])[C&amp;X3,C&amp;X2,N&amp;X2,%pe,%px,%py,%sx,%sy]" overrides="c2" desc="Inner Sp2 carbons in conjugated systems" doi="10.1002/jcc/20035"/>
+  <Definition name="cf" class="cf" desc="Inner Sp2 carbons in conjugated systems, identical to ce" doi="10.1002/jcc/20035"/>
+  <Definition name="cg" class="cg" def="[C;X2]([C&amp;X2,N&amp;X1])[C&amp;X3,C&amp;X2,N&amp;X2,N&amp;X1,%pe,%px,%py,%sx,%sy]" overrides="c1" desc="Inner Sp carbons in conjugated systems" doi="10.1002/jcc/20035"/>
+  <Definition name="ch" class="ch" desc="Inner Sp carbons in conjugated systems, identical to cg" doi="10.1002/jcc/20035"/>
+  <Definition name="cx" class="cx" def="[C;X4;r3]" overrides="c3" desc="Sp3 carbons in triangle systems" doi="10.1002/jcc/20035"/>
+  <Definition name="cy" class="cy" def="[C;X4;r4]" overrides="c3" desc="Sp3 carbons in square systems" doi="10.1002/jcc/20035"/>
+  <Definition name="cu" class="cu" def="[C;X3;r3]" overrides="c2" desc="Sp2 carbons in triangle systems" doi="10.1002/jcc/20035"/>
+  <Definition name="cv" class="cv" def="[C;X3;r4]" overrides="c2" desc="Sp2 carbons in square systems" doi="10.1002/jcc/20035"/>
+  <Definition name="cz" class="cz" def="[C;X3](N)(N)N" overrides="c2" desc="Sp2 carbon in guanidine group" doi="10.1002/jcc/20035"/>
+  <Definition name="ha" class="ha" def="H[C;!X4]" desc="H bonded to aromatic carbon" doi="10.1002/jcc/20035"/>
+  <Definition name="hc" class="hc" def="H[C;X4]" desc="H bonded to aliphatic carbon without d. group" doi="10.1002/jcc/20035"/>
+  <Definition name="h1" class="h1" def="H[C;X4]([N,O,F,Cl,Br,I,S])" overrides="hc" desc="H bonded to aliphatic carbon with 1 d. group" doi="10.1002/jcc/20035"/>
+  <Definition name="h2" class="h2" def="H[C;X4]([N,O,F,Cl,Br,I,S])[N,O,F,Cl,Br,I,S]" overrides="h1" desc="H bonded to aliphatic carbon with 2 d. group" doi="10.1002/jcc/20035"/>
+  <Definition name="h3" class="h3" def="H[C;X4]([N,O,F,Cl,Br,I,S])([N,O,F,Cl,Br,I,S])[N,O,F,Cl,Br,I,S]" overrides="h2" desc="H bonded to aliphatic carbon with 3 d. group" doi="10.1002/jcc/20035"/>
+  <Definition name="h4" class="h4" def="H[C;!X4]([N,O,F,Cl,Br,I,S])" overrides="ha" desc="H bonded to non-sp3 carbon with 1 d. group" doi="10.1002/jcc/20035"/>
+  <Definition name="h5" class="h5" def="H[C;!X4]([N,O,F,Cl,Br,I,S])([N,O,F,Cl,Br,I,S])" overrides="h4" desc="H bonded to non-sp3 carbon with 2 d. group" doi="10.1002/jcc/20035"/>
+  <Definition name="hn" class="hn" def="HN" desc="H bonded to nitrogen atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="ho" class="ho" def="HO" desc="Hydroxyl group" doi="10.1002/jcc/20035"/>
+  <Definition name="hp" class="hp" def="HP" desc="H bonded to phosphate" doi="10.1002/jcc/20035"/>
+  <Definition name="hs" class="hs" def="HS" desc="Hydrogen bonded to sulphur" doi="10.1002/jcc/20035"/>
+  <Definition name="hw" class="hw" def="H[%ow]" overrides="ho" desc="Hydrogen in water" doi="10.1002/jcc/20035"/>
+  <Definition name="hx" class="hx" def="H[C][N;%n4]" overrides="h1,h2,h3" desc="H bonded to C next to positively charged group" doi="10.1002/jcc/20035"/>
+  <Definition name="f" class="f" def="F" desc="Fluorine" doi="10.1002/jcc/20035"/>
+  <Definition name="cl" class="cl" def="Cl" desc="Chlorine" doi="10.1002/jcc/20035"/>
+  <Definition name="br" class="br" def="Br" desc="Bromine" doi="10.1002/jcc/20035"/>
+  <Definition name="i" class="i" def="I" desc="Iodine" doi="10.1002/jcc/20035"/>
+  <Definition name="n" class="n" def="[N;X3][C;X3][O&amp;X1,S&amp;X1]" overrides="n3,nh,na,na_r5,na_r6" desc="Sp2 nitrogen in amide groups" doi="10.1002/jcc/20035"/>
+  <Definition name="n1" class="n1" def="[N;X1]" desc="Sp N" doi="10.1002/jcc/20035"/>
+  <Definition name="n2" class="n2" def="[N;X2]" desc="aliphatic Sp2 N with two connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="n3" class="n3" def="[N;X3]" desc="Sp3 N with three connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="n4" class="n4" def="[N;X4]" desc="Sp3 N with four connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="na" class="na" def="[N;X3]([C&amp;X3,N&amp;X2])[C&amp;X3,N&amp;X2]" overrides="n3" desc="Sp2 N with three connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="na_r5" class="na" def="[N;X3;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2]1" overrides="na,n3,nh" desc="Sp2 N with three connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="na_r6" class="na" def="[N;X3;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2]1" overrides="na,na_r5,n3,nh" desc="Sp2 N with three connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="nb" class="nb" def="[N;X2;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1" overrides="nc_r6" desc="Sp2 N in pure aromatic systems" doi="10.1002/jcc/20035"/>
+  <Definition name="nc_r5" class="nc" def="[N;X2;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ne,n2" desc="Sp2 N in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
+  <Definition name="nc_r6" class="nc" def="[N;X2;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ne,n2,nc_r5" desc="Sp2 N in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
+  <Definition name="nd" class="nd" desc="Sp2 N in non-pure aromatic systems, identical to nc" doi="10.1002/jcc/20035"/>
+  <Definition name="ne" class="ne" def="[N;X2]([C&amp;X3,C&amp;X2,N&amp;X2,%pe,%px,%py,%sx,%sy])[C&amp;X2,C&amp;X3,N&amp;X2,%pe,%px,%py,%sx,%sy]" overrides="n2" desc="Inner Sp2 N in conjugated systems" doi="10.1002/jcc/20035"/>
+  <Definition name="nf" class="nf" desc="Inner Sp2 N in conjugated systems, identical to ne" doi="10.1002/jcc/20035"/>
+  <Definition name="nh" class="nh" def="[N;X3][C&amp;X3,N&amp;X2]" overrides="n3,na" desc="Amine N connected one or more aromatic rings" doi="10.1002/jcc/20035"/>
+  <Definition name="no" class="no" def="[N;X3]([O&amp;X1])[O&amp;X1]" overrides="na,na_r5,na_r6,n3,nh" desc="Nitro N" doi="10.1002/jcc/20035"/>
+  <Definition name="ni" class="ni" def="[N;X3;r3][C][O&amp;X1,S&amp;X1]" overrides="n,np,nm" desc="like n in RG3" doi="10.1002/jcc/20035"/>
+  <Definition name="nj" class="nj" def="[N;X3;r4][C][O&amp;X1,S&amp;X1]" overrides="n,nq,nn" desc="like n in RG4" doi="10.1002/jcc/20035"/>
+  <Definition name="nk" class="nk" def="[N;X4;r3]" overrides="n4" desc="like n4/nx/ny in RG3" doi="10.1002/jcc/20035"/>
+  <Definition name="nl" class="nl" def="[N;X4;r4]" overrides="n4" desc="like n4/nx/ny in RG4" doi="10.1002/jcc/20035"/>
+  <Definition name="nm" class="nm" def="[N;X3;r3][C&amp;X3,N&amp;X2]" overrides="nh" desc="like nh in RG3" doi="10.1002/jcc/20035"/>
+  <Definition name="nn" class="nn" def="[N;X3;r4][C&amp;X3,N&amp;X2]" overrides="nh" desc="like nh in RG4" doi="10.1002/jcc/20035"/>
+  <Definition name="np" class="np" def="[N;X3;r3]" overrides="n3" desc="like n3 in RG3" doi="10.1002/jcc/20035"/>
+  <Definition name="nq" class="nq" def="[N;X3;r4]" overrides="n3" desc="like n3 in RG4" doi="10.1002/jcc/20035"/>
+  <Definition name="o" class="o" def="[O;X1]" desc="Oxygen with one connected atom" doi="10.1002/jcc/20035"/>
+  <Definition name="oh" class="oh" def="[O;X2]H" desc="Oxygen in hydroxyl group" doi="10.1002/jcc/20035"/>
+  <Definition name="op" class="op" desc="" doi=""/>
+  <Definition name="oq" class="oq" desc="" doi=""/>
+  <Definition name="os" class="os" def="[O;X2]([!H])[!H]" desc="Ether and ester oxygen" doi="10.1002/jcc/20035"/>
+  <Definition name="ow" class="ow" def="[O;X2]([H;%hw])[H;%hw]" overrides="os" desc="Oxygen in water" doi="10.1002/jcc/20035"/>
+  <Definition name="p2" class="p2" def="[P;X2]" desc="Phosphate with two connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="p3" class="p3" def="[P;X3]" desc="Phosphate with three connected atoms, such as PH3" doi="10.1002/jcc/20035"/>
+  <Definition name="p4" class="p4" def="[P;X3][O&amp;X1,S&amp;X1,%n2]" overrides="p3" desc="Phosphate with three connected atoms, such as O=P(CH3)2" doi="10.1002/jcc/20035"/>
+  <Definition name="p5" class="p5" def="[P;X4]" desc="Phosphate with four connected atoms, such as O=P(OH)3" doi="10.1002/jcc/20035"/>
+  <Definition name="pb" class="pb" def="[P;X2;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1" overrides="pe,pc_r6" desc="Sp2 P in pure aromatic systems" doi="10.1002/jcc/20035"/>
+  <Definition name="pc_r5" class="pc" def="[P;X2;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="pe" desc="Sp2 P in non-pure aromatic system" doi="10.1002/jcc/20035"/>
+  <Definition name="pc_r6" class="pc" def="[P;X2;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="pe,pc_r5" desc="Sp2 P in non-pure aromatic system" doi="10.1002/jcc/20035"/>
+  <Definition name="pd" class="pd" desc="Sp2 P in non-pure aromatic systems, identical to pc" doi="10.1002/jcc/20035"/>
+  <Definition name="pe" class="pe" def="[P;X2]([C&amp;X3,C&amp;X2,N&amp;X2])[C&amp;X3,C&amp;X2,N&amp;X2,%pe,%px,%py,%sx,%sy]" overrides="p2" desc="Inner Sp2 P in conjugated systems" doi="10.1002/jcc/20035"/>
+  <Definition name="pf" class="pf" desc="Inner Sp2 P in conjugated systems, identical to pe" doi="10.1002/jcc/20035"/>
+  <Definition name="px" class="px" def="[P;X3]([O;X1])[C&amp;X3,N&amp;X2]" overrides="p4" desc="Special p4 in conjugated systems (phosphite)" doi="10.1002/jcc/20035"/>
+  <Definition name="py" class="py" def="[P;X4]([O;X1])([O;X2])([O;X2])[C&amp;X3,N&amp;X2,P&amp;X4]" overrides="p5" desc="Special p5 in conjugated systems (phosphate)" doi="10.1002/jcc/20035"/>
+  <Definition name="s" class="s" def="[S;X1]" desc="S with one connected atom" doi="10.1002/jcc/20035"/>
+  <Definition name="s2" class="s2" def="[S;X2][!H]" desc="S with two connected atom, involved at least one double bond" doi="10.1002/jcc/20035"/>
+  <Definition name="s4" class="s4" def="[S;X3]" desc="S with three connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="s6" class="s6" def="[S;X4]" desc="S with four connected atoms" doi="10.1002/jcc/20035"/>
+  <Definition name="sh" class="sh" def="[S]H" overrides="s2" desc="Sp3 S connected with hydrogen" doi="10.1002/jcc/20035"/>
+  <Definition name="sp" class="sp" desc="" doi=""/>
+  <Definition name="sq" class="sq" desc="" doi=""/>
+  <Definition name="ss" class="ss" def="[S;X2]([C,S,O])[C,S,O]" overrides="s2" desc="Sp3 S in thio-ester and thio-ether" doi="10.1002/jcc/20035"/>
+  <Definition name="sx" class="sx" def="[S;X3]([O;X1])[C&amp;X3,N&amp;X2]" overrides="s4" desc="Special s4 in conjugated systems (sulfoxide)" doi="10.1002/jcc/20035"/>
+  <Definition name="sy" class="sy" def="[S;X4]([O;X1])([O;X1])[C&amp;X3,N&amp;X2]" overrides="s6" desc="Special s6 in conjugated systems (sulfone)" doi="10.1002/jcc/20035"/>
+</Smarts>

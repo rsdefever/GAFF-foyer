@@ -2,11 +2,15 @@
 
 This repository provides a foyer (https://github.com/mosdef-hub/foyer) compatible XML file for the Generalized Amber Force Field (GAFF). 
 
-Currently in beta. Please always verify the choice of atomtypes.
+### Currently in beta. Please always verify the choice of atomtypes.
 
 ## Known issues
 
 GAFF has 'paired' atomtypes for conjugated systems (e.g., cc/cd, ce/cf, nc/nd, etc.). The reasoning for this is explained in the GAFF and Antechamber papers (see links below). This implementation does not currently support identifying the latter of the paired types. In other words, all conjugated types will be identified as the first of the pair (e.g., all 'cc' and 'cd' atomtypes will be identified as 'cc').
+
+## Source of parameters
+
+Parameters for GAFF were taken from AmberTools19. The md5sum for the AmberTools19.tar.bz2 file was afffe8a5473a0bd143b98f0396f52f0f. The md5sum for the gaff.dat file in this repo is 2635454817b8f9139d87d4bb397c47b3.
 
 ## Implementing GAFF support in foyer
 

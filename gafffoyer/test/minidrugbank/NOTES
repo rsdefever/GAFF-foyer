@@ -1,0 +1,18 @@
+
+Number of atoms:
+
+cat ante_types/*mol2 | grep -B 1 BOND | grep -v BOND | grep -v "\-\-" | awk '{sum +=$1}END{print sum}'
+
+Number incorrect mols:
+
+grep -B 1 idx compare_antechamber-foyer.log | grep mdb | wc -l
+
+Number incorrect atoms ignoring conjugated:
+
+grep idx compare_antechamber-foyer.log | grep -v "Ante: cd  Foyer: cc" | grep -v "Ante: nd  Foyer: nc" | grep -v "Ante: cf  Foyer: ce" | grep -v "Ante: ch  Foyer: cg" | grep -v "Ante: cq  Foyer: cp" | wc -l
+
+Number incorrect mols ignoring conjugated:
+
+cat compare_antechamber-foyer.log | grep -v "Ante: cd  Foyer: cc" | grep -v "Ante: nd  Foyer: nc" | grep -v "Ante: cf  Foyer: ce" | grep -v "Ante: ch  Foyer: cg" | grep -v "Ante: cq  Foyer: cp" | grep -B 1 idx | grep mdb | wc -l
+
+

@@ -1,0 +1,8 @@
+
+# Removed because Foyer can't recognize 
+# 'os' type in 3 membered ring:
+
+mdb_112.mol2
+mdb_137.mol2
+mdb_230.mol2
+mdb_362.mol2

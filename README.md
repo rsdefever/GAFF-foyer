@@ -1,6 +1,6 @@
 # GAFF-foyer
 
-This repository provides a foyer (https://github.com/mosdef-hub/foyer) compatible XML file for the Generalized Amber Force Field (GAFF). 
+This repository provides a foyer (https://github.com/mosdef-hub/foyer) compatible XML file for the General Amber Force Field (GAFF). 
 
 ### Currently in beta. Please always verify the choice of atomtypes.
 
@@ -14,7 +14,7 @@ Parameters for GAFF were taken from AmberTools19. The md5sum for the AmberTools1
 
 ## Implementing GAFF support in foyer
 
-This document describes the development of foyer SMARTS strings for the Generalized Amber Force Field (GAFF). A few related links are provided below:
+This document describes the development of foyer SMARTS strings for the General Amber Force Field (GAFF). A few related links are provided below:
 
 - [MoSDeF](https://mosdef.org)
 - [Foyer GitHub](https://github.com/mosdef-hub/foyer)

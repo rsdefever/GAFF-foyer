@@ -2,8 +2,6 @@ import os
 import glob
 from pkg_resources import resource_filename
 
-from foyer import Forcefield
-
 def get_ff_path():
     return [resource_filename('gafffoyer', 'xml')]
 
@@ -24,5 +22,7 @@ def get_forcefield(name=None):
                 ' in path {}'.format(name, get_ff_path()))
     return Forcefield(forcefield_files=str(ff_path))
 
-GAFF = get_forcefield(name='gaff')
+def load_GAFF():
+    from foyer import Forcefield
+    return get_forcefield(name='gaff')
 #GAFF_NOSMARTS = get_forcefield(name='gaff_nosmarts')

@@ -11,7 +11,7 @@ setup(
     install_requires="foyer",
     entry_points={
         'foyer.forcefields': [
-            "GAFF = gafffoyer.gafffoyer:GAFF"]
+            "load_GAFF = gafffoyer.gafffoyer:load_GAFF"]
     },
     packages=["gafffoyer"],
     zip_safe=False,

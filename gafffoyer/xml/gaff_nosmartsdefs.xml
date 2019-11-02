@@ -35,12 +35,12 @@
     <Type name="cl" class="cl" element="Cl" mass="35.45" desc="Chlorine" doi="10.1002/jcc/20035"/>
     <Type name="br" class="br" element="Br" mass="79.90" desc="Bromine" doi="10.1002/jcc/20035"/>
     <Type name="i" class="i" element="I" mass="126.9" desc="Iodine" doi="10.1002/jcc/20035"/>
-    <Type name="n" class="n" element="N" mass="14.01"  desc="Sp2 nitrogen in amide groups" doi="10.1002/jcc/20035"/>
+    <Type name="n" class="n" element="N" mass="14.01" desc="Sp2 nitrogen in amide groups" doi="10.1002/jcc/20035"/>
     <Type name="n1" class="n1" element="N" mass="14.01" desc="Sp N" doi="10.1002/jcc/20035"/>
     <Type name="n2" class="n2" element="N" mass="14.01" desc="aliphatic Sp2 N with two connected atoms" doi="10.1002/jcc/20035"/>
     <Type name="n3" class="n3" element="N" mass="14.01" desc="Sp3 N with three connected atoms" doi="10.1002/jcc/20035"/>
     <Type name="n4" class="n4" element="N" mass="14.01" desc="Sp3 N with four connected atoms" doi="10.1002/jcc/20035"/>
-    <Type name="na" class="na" element="N" mass="14.01"  desc="Sp2 N with three connected atoms" doi="10.1002/jcc/20035"/>
+    <Type name="na" class="na" element="N" mass="14.01" desc="Sp2 N with three connected atoms" doi="10.1002/jcc/20035"/>
     <Type name="nb" class="nb" element="N" mass="14.01" desc="Sp2 N in pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="nc" class="nc" element="N" mass="14.01" desc="Sp2 N in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="nd" class="nd" element="N" mass="14.01" desc="Sp2 N in non-pure aromatic systems, identical to nc" doi="10.1002/jcc/20035"/>
@@ -7070,14 +7070,14 @@
     <Proper class1="c3" class2="os" class3="p5" class4="o" periodicity1="2" k1="3.3472000000000004" phase1="0.0" periodicity2="3" k2="2.3012" phase2="0.0"/>
     <Proper class1="ca" class2="ca" class3="os" class4="p5" periodicity1="2" k1="7.322" phase1="3.141592653589793"/>
     <Proper class1="ca" class2="os" class3="p5" class4="o" periodicity1="2" k1="3.3472000000000004" phase1="3.141592653589793" periodicity2="3" k2="0.41840000000000005" phase2="0.0"/>
-    <Improper class1="" class2="X" class3="o" class4="o" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
-    <Improper class1="" class2="" class3="X" class4="o" periodicity1="2" k1="43.932" phase1="3.141592653589793"/>
-    <Improper class1="" class2="" class3="X" class4="ha" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
-    <Improper class1="" class2="" class3="X" class4="hn" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
-    <Improper class1="" class2="" class3="X" class4="hn" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
-    <Improper class1="" class2="" class3="X" class4="hn" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
-    <Improper class1="" class2="X" class3="c3" class4="c3" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
-    <Improper class1="" class2="X" class3="n2" class4="n2" periodicity1="2" k1="43.932" phase1="3.141592653589793"/>
+    <Improper class1="c" class2="" class3="o" class4="o" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
+    <Improper class1="c" class2="" class3="" class4="o" periodicity1="2" k1="43.932" phase1="3.141592653589793"/>
+    <Improper class1="ca" class2="" class3="" class4="ha" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
+    <Improper class1="n" class2="" class3="" class4="hn" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
+    <Improper class1="n2" class2="" class3="" class4="hn" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
+    <Improper class1="na" class2="" class3="" class4="hn" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
+    <Improper class1="n" class2="" class3="c3" class4="c3" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
+    <Improper class1="ca" class2="" class3="n2" class4="n2" periodicity1="2" k1="43.932" phase1="3.141592653589793"/>
     <Improper class1="c2" class2="c" class3="c2" class4="c3" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
     <Improper class1="ca" class2="c" class3="ca" class4="c3" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>
     <Improper class1="n" class2="c" class3="c3" class4="hn" periodicity1="2" k1="4.6024" phase1="3.141592653589793"/>

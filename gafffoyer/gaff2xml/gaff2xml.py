@@ -148,17 +148,17 @@ def main():
         if continue_reading == False:
             torsion_force = ET.SubElement(torsion_forces, 'Improper')
             torsion_ctr = 1
-            if classes[0].upper() == 'X':
+            if classes[2].upper() == 'X':
                 torsion_force.set('class1', '')
             else:
                 torsion_force.set('class1', classes[2])
 
-            if classes[1].upper() == 'X':
+            if classes[0].upper() == 'X':
                 torsion_force.set('class2', '')
             else:
                 torsion_force.set('class2', classes[0])
 
-            if classes[2].upper() == 'X':
+            if classes[1].upper() == 'X':
                 torsion_force.set('class3', '')
             else:
                 torsion_force.set('class3', classes[1])

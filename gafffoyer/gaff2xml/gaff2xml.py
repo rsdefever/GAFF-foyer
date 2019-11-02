@@ -22,7 +22,6 @@ def main():
     start_bond=86; end_bond=1014
     start_angle=1015; end_angle=6330
     start_torsion=6331; end_torsion=7075
-    start_improper=7076 ; end_improper=7114
 
     data = []
     with open(gaff_parm_path) as f:
@@ -48,7 +47,6 @@ def main():
     bond_parms = [x for x in data[start_bond:end_bond]]
     angle_parms = [x for x in data[start_angle:end_angle]]
     torsion_parms = [x for x in data[start_torsion:end_torsion]]
-    improper_parms = [x for x in data[start_improper:end_improper]]
  
     root = ET.Element("ForceField")
 
@@ -100,7 +98,7 @@ def main():
     torsion_forces = ET.SubElement(root,'PeriodicTorsionForce')
     continue_reading = False
     for torsion in torsion_parms:
-        # Amber leap convention...if periodicity < 0 it means it is 
+        # Weird amber leap convention...if periodicity < 0 it means it is 
         # there will follow additional torsional terms for the same set of atoms
         # See http://ambermd.org/FileFormats.php#parm.dat
         classes = re.split('\s+-|-|\s+',torsion[0:11])
@@ -141,47 +139,6 @@ def main():
         name = 'phase' + str(torsion_ctr)
         torsion_force.set(name, convert_theta(parms[2]))
 
-    continue_reading = False
-    for torsion in improper_parms:
-        classes = re.split('\s+-|-|\s+',torsion[0:11])
-        parms = torsion[11:54].split()
-        if continue_reading == False:
-            torsion_force = ET.SubElement(torsion_forces, 'Improper')
-            torsion_ctr = 1
-            if classes[0].upper() == 'X':
-                torsion_force.set('class1', '')
-            else:
-                torsion_force.set('class1', classes[2])
-
-            if classes[1].upper() == 'X':
-                torsion_force.set('class2', '')
-            else:
-                torsion_force.set('class2', classes[0])
-
-            if classes[2].upper() == 'X':
-                torsion_force.set('class3', '')
-            else:
-                torsion_force.set('class3', classes[1])
-
-            if classes[3].upper() == 'X':
-                torsion_force.set('class4', '')
-            else:
-                torsion_force.set('class4', classes[3])
-        else:
-            torsion_ctr += 1
-        if float(parms[2]) < 0.0:
-                continue_reading = True
-        else:
-            continue_reading = False
-            
-        name = 'periodicity' + str(torsion_ctr)
-        torsion_force.set(name, str(int(abs(float(parms[2])))))
-        name = 'k' + str(torsion_ctr)
-        torsion_force.set(name, convert_improperk(parms[0]))
-        name = 'phase' + str(torsion_ctr)
-        torsion_force.set(name, convert_theta(parms[1]))
-
-    # Write XML with SMARTS defs
     ET.ElementTree(root).write('../xml/gaff.xml',pretty_print=True)
 
 def determine_element(mass):
@@ -237,10 +194,6 @@ def convert_anglek(anglek):
 
 def convert_torsionk(torsionk,idivf):
     converted_torsionk = float(torsionk)*KCAL_TO_KJ/float(idivf)
-    return str(converted_torsionk)
-
-def convert_improperk(torsionk):
-    converted_torsionk = float(torsionk)*KCAL_TO_KJ
     return str(converted_torsionk)
 
 if __name__ == "__main__":

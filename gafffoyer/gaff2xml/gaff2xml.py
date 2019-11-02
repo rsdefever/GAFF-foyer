@@ -139,6 +139,47 @@ def main():
         name = 'phase' + str(torsion_ctr)
         torsion_force.set(name, convert_theta(parms[2]))
 
+    continue_reading = False
+    for torsion in improper_parms:
+        classes = re.split('\s+-|-|\s+',torsion[0:11])
+        parms = torsion[11:54].split()
+        if continue_reading == False:
+            torsion_force = ET.SubElement(torsion_forces, 'Improper')
+            torsion_ctr = 1
+            if classes[2].upper() == 'X':
+                torsion_force.set('class1', '')
+            else:
+                torsion_force.set('class1', classes[2])
+
+            if classes[0].upper() == 'X':
+                torsion_force.set('class2', '')
+            else:
+                torsion_force.set('class2', classes[0])
+
+            if classes[1].upper() == 'X':
+                torsion_force.set('class3', '')
+            else:
+                torsion_force.set('class3', classes[1])
+
+            if classes[3].upper() == 'X':
+                torsion_force.set('class4', '')
+            else:
+                torsion_force.set('class4', classes[3])
+        else:
+            torsion_ctr += 1
+        if float(parms[2]) < 0.0:
+                continue_reading = True
+        else:
+            continue_reading = False
+            
+        name = 'periodicity' + str(torsion_ctr)
+        torsion_force.set(name, str(int(abs(float(parms[2])))))
+        name = 'k' + str(torsion_ctr)
+        torsion_force.set(name, convert_improperk(parms[0]))
+        name = 'phase' + str(torsion_ctr)
+        torsion_force.set(name, convert_theta(parms[1]))
+
+    # Write XML with SMARTS defs
     ET.ElementTree(root).write('../xml/gaff.xml',pretty_print=True)
 
 def determine_element(mass):

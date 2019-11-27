@@ -23,7 +23,6 @@ def main():
     start_bond=86; end_bond=1014
     start_angle=1015; end_angle=6330
     start_torsion=6331; end_torsion=7075
-    start_improper=7076 ; end_improper=7114
 
     data = []
     with open(gaff_parm_path) as f:
@@ -238,10 +237,6 @@ def convert_anglek(anglek):
 
 def convert_torsionk(torsionk,idivf):
     converted_torsionk = float(torsionk)*KCAL_TO_KJ/float(idivf)
-    return str(converted_torsionk)
-
-def convert_improperk(torsionk):
-    converted_torsionk = float(torsionk)*KCAL_TO_KJ
     return str(converted_torsionk)
 
 if __name__ == "__main__":

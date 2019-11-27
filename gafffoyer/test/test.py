@@ -23,7 +23,7 @@ def main():
     load_path = test_dir  + '/ante_types/'
     log_path = test_dir + '/compare_antechamber-foyer.log'
     files = glob.glob(load_path+'/*.mol2')
-    
+
     with open(log_path,'w') as log:
     
         for filen in files:

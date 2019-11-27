@@ -7,6 +7,7 @@
     <Type name="ca" class="ca" element="C" mass="12.01" def="[C;X3;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1" overrides="ce,cc_r5,cc_r6,c2,cz" desc="Sp2 C in pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="cp" class="cp" element="C" mass="12.01" def="[C;X3;r6;R1]([C;X3;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1)([C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5][C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5])[C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5][C&amp;X3,N&amp;X2,P&amp;X2;r6;!r5]" overrides="ca,cc_r5,cc_r6" desc="Head Sp2 C that connect two rings in biphenyl sys." doi="10.1002/jcc/20035"/>
     <Type name="cq" class="cq" element="C" mass="12.01" desc="Head Sp2 C that connect two rings in biphenyl sys. identical to cp" doi="10.1002/jcc/20035"/>
+    <Type name="cc" class="cc" element="C" mass="12.01" def="" desc="Sp2 carbons in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="cc_r5" class="cc" element="C" mass="12.01" def="[C;X3;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ce,c2,cz" desc="Sp2 carbons in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="cc_r6" class="cc" element="C" mass="12.01" def="[C;X3;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ce,c2,cz,cc_r5" desc="Sp2 carbons in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="cd" class="cd" element="C" mass="12.01" desc="Sp2 carbons in non-pure aromatic systems, identical to cc" doi="10.1002/jcc/20035"/>
@@ -45,6 +46,7 @@
     <Type name="na_r5" class="na" element="N" mass="14.01" def="[N;X3;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2]1" overrides="na,n3,nh" desc="Sp2 N with three connected atoms" doi="10.1002/jcc/20035"/>
     <Type name="na_r6" class="na" element="N" mass="14.01" def="[N;X3;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2]1" overrides="na,na_r5,n3,nh" desc="Sp2 N with three connected atoms" doi="10.1002/jcc/20035"/>
     <Type name="nb" class="nb" element="N" mass="14.01" def="[N;X2;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1" overrides="nc_r6" desc="Sp2 N in pure aromatic systems" doi="10.1002/jcc/20035"/>
+    <Type name="nc" class="nc" element="N" mass="14.01" def="" desc="Sp2 N in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="nc_r5" class="nc" element="N" mass="14.01" def="[N;X2;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ne,n2" desc="Sp2 N in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="nc_r6" class="nc" element="N" mass="14.01" def="[N;X2;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="ne,n2,nc_r5" desc="Sp2 N in non-pure aromatic systems" doi="10.1002/jcc/20035"/>
     <Type name="nd" class="nd" element="N" mass="14.01" desc="Sp2 N in non-pure aromatic systems, identical to nc" doi="10.1002/jcc/20035"/>
@@ -71,6 +73,7 @@
     <Type name="p4" class="p4" element="P" mass="30.97" def="[P;X3][O&amp;X1,S&amp;X1,%n2]" overrides="p3" desc="Phosphate with three connected atoms, such as O=P(CH3)2" doi="10.1002/jcc/20035"/>
     <Type name="p5" class="p5" element="P" mass="30.97" def="[P;X4]" desc="Phosphate with four connected atoms, such as O=P(OH)3" doi="10.1002/jcc/20035"/>
     <Type name="pb" class="pb" element="P" mass="30.97" def="[P;X2;r6]1[C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2][C&amp;X3,N&amp;X2,P&amp;X2]1" overrides="pe,pc_r6" desc="Sp2 P in pure aromatic systems" doi="10.1002/jcc/20035"/>
+    <Type name="pc" class="pc" element="P" mass="30.97" def="" desc="Sp2 P in non-pure aromatic system" doi="10.1002/jcc/20035"/>
     <Type name="pc_r5" class="pc" element="P" mass="30.97" def="[P;X2;r5]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="pe" desc="Sp2 P in non-pure aromatic system" doi="10.1002/jcc/20035"/>
     <Type name="pc_r6" class="pc" element="P" mass="30.97" def="[P;X2;r6]1[C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2][C&amp;X3,N&amp;X3,N&amp;X2,O&amp;X2,S&amp;X2,P&amp;X2]1" overrides="pe,pc_r5" desc="Sp2 P in non-pure aromatic system" doi="10.1002/jcc/20035"/>
     <Type name="pd" class="pd" element="P" mass="30.97" desc="Sp2 P in non-pure aromatic systems, identical to pc" doi="10.1002/jcc/20035"/>
@@ -97,6 +100,7 @@
     <Atom type="ca" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
     <Atom type="cp" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
     <Atom type="cq" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
+    <Atom type="cc" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
     <Atom type="cc_r5" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
     <Atom type="cc_r6" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
     <Atom type="cd" charge="0.0" sigma="0.33996695084235345" epsilon="0.359824"/>
@@ -135,6 +139,7 @@
     <Atom type="na_r5" charge="0.0" sigma="0.32499985237759577" epsilon="0.7112800000000001"/>
     <Atom type="na_r6" charge="0.0" sigma="0.32499985237759577" epsilon="0.7112800000000001"/>
     <Atom type="nb" charge="0.0" sigma="0.32499985237759577" epsilon="0.7112800000000001"/>
+    <Atom type="nc" charge="0.0" sigma="0.32499985237759577" epsilon="0.7112800000000001"/>
     <Atom type="nc_r5" charge="0.0" sigma="0.32499985237759577" epsilon="0.7112800000000001"/>
     <Atom type="nc_r6" charge="0.0" sigma="0.32499985237759577" epsilon="0.7112800000000001"/>
     <Atom type="nd" charge="0.0" sigma="0.32499985237759577" epsilon="0.7112800000000001"/>
@@ -161,6 +166,7 @@
     <Atom type="p4" charge="0.0" sigma="0.37417746161894255" epsilon="0.8368000000000001"/>
     <Atom type="p5" charge="0.0" sigma="0.37417746161894255" epsilon="0.8368000000000001"/>
     <Atom type="pb" charge="0.0" sigma="0.37417746161894255" epsilon="0.8368000000000001"/>
+    <Atom type="pc" charge="0.0" sigma="0.37417746161894255" epsilon="0.8368000000000001"/>
     <Atom type="pc_r5" charge="0.0" sigma="0.37417746161894255" epsilon="0.8368000000000001"/>
     <Atom type="pc_r6" charge="0.0" sigma="0.37417746161894255" epsilon="0.8368000000000001"/>
     <Atom type="pd" charge="0.0" sigma="0.37417746161894255" epsilon="0.8368000000000001"/>

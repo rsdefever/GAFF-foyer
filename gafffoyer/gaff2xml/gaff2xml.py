@@ -10,12 +10,13 @@ KCAL_TO_KJ = 4.184
 
 def main():
 
-    if len(sys.argv) != 3:
-        print('usage: python gaff2xml.py [path_to_smarts_defs] [path_to_gaff_dat_file]')
+    if len(sys.argv) != 4:
+        print('usage: python gaff2xml.py [path_to_smarts_defs] [path_to_gaff_dat_file] [path_to_output_xml_file]')
         exit(1)
     else:
         smarts_def_path = sys.argv[1]
         gaff_parm_path = sys.argv[2]
+        xml_out_path = sys.argv[3]
 
     start_mass=1; end_mass=84
     start_lj=7119; end_lj=7202
@@ -44,19 +45,19 @@ def main():
 
 
     mass_parms = {x.split()[0]: x.split()[1] for x in data[start_mass:end_mass]}
-    lj_parms = {x.split()[0]: (x.split()[1:3]) for x in data[start_lj:end_lj]} 
+    lj_parms = {x.split()[0]: (x.split()[1:3]) for x in data[start_lj:end_lj]}
     bond_parms = [x for x in data[start_bond:end_bond]]
     angle_parms = [x for x in data[start_angle:end_angle]]
     torsion_parms = [x for x in data[start_torsion:end_torsion]]
     improper_parms = [x for x in data[start_improper:end_improper]]
- 
+
     root = ET.Element("ForceField")
 
     atomtypes = ET.SubElement(root, 'AtomTypes')
     nonbonded = ET.SubElement(root, 'NonbondedForce')
     nonbonded.set('coulomb14scale', '0.833333333')
     nonbonded.set('lj14scale', '0.5')
-   
+
     for atype in smarts.keys():
         atomtype = ET.SubElement(atomtypes, 'Type')
         nb_force = ET.SubElement(nonbonded, 'Atom')
@@ -85,7 +86,7 @@ def main():
         bond_force.set('class2', classes[1])
         bond_force.set('length', convert_bondlength(parms[1]))
         bond_force.set('k', convert_bondk(parms[0]))
-    
+
     angle_forces = ET.SubElement(root,'HarmonicAngleForce')
     for angle in angle_parms:
         angle_force = ET.SubElement(angle_forces, 'Angle')
@@ -96,11 +97,11 @@ def main():
         angle_force.set('class3', classes[2])
         angle_force.set('angle', convert_theta(parms[1]))
         angle_force.set('k', convert_anglek(parms[0]))
-    
+
     torsion_forces = ET.SubElement(root,'PeriodicTorsionForce')
     continue_reading = False
     for torsion in torsion_parms:
-        # Amber leap convention...if periodicity < 0 it means it is 
+        # Amber leap convention...if periodicity < 0 it means it is
         # there will follow additional torsional terms for the same set of atoms
         # See http://ambermd.org/FileFormats.php#parm.dat
         classes = re.split('\s+-|-|\s+',torsion[0:11])
@@ -133,7 +134,7 @@ def main():
                 continue_reading = True
         else:
             continue_reading = False
-            
+
         name = 'periodicity' + str(torsion_ctr)
         torsion_force.set(name, str(int(abs(float(parms[3])))))
         name = 'k' + str(torsion_ctr)
@@ -173,7 +174,7 @@ def main():
                 continue_reading = True
         else:
             continue_reading = False
-            
+
         name = 'periodicity' + str(torsion_ctr)
         torsion_force.set(name, str(int(abs(float(parms[2])))))
         name = 'k' + str(torsion_ctr)
@@ -182,7 +183,7 @@ def main():
         torsion_force.set(name, convert_theta(parms[1]))
 
     # Write XML with SMARTS defs
-    ET.ElementTree(root).write('../xml/gaff.xml',pretty_print=True)
+    ET.ElementTree(root).write(xml_out_path,pretty_print=True)
 
 def determine_element(mass):
 

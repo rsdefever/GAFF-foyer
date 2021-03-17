@@ -84,8 +84,7 @@ def main():
         for iclass in classes[:4]:
             if iclass not in mass_parms.keys() and iclass.upper() != "X":
                 elements_to_remove.add(improper)
-    remove_elements(torsion_parms, elements_to_remove)
-
+    remove_elements(improper_parms, elements_to_remove)
 
 
     # Atoms/nonbonded (charges set to zero)

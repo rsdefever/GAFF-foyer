@@ -10,13 +10,12 @@ KCAL_TO_KJ = 4.184
 
 def main():
 
-    if len(sys.argv) != 4:
-        print('usage: python gaff2xml.py [path_to_smarts_defs] [path_to_gaff_dat_file] [path_to_output_xml_file]')
+    if len(sys.argv) != 3:
+        print('usage: python gaff2xml.py [path_to_gaff_dat_file] [path_to_output_xml_file]')
         exit(1)
     else:
-        smarts_def_path = sys.argv[1]
-        gaff_parm_path = sys.argv[2]
-        xml_out_path = sys.argv[3]
+        gaff_parm_path = sys.argv[1]
+        xml_out_path = sys.argv[2]
 
     start_mass=1; end_mass=84
     start_lj=7119; end_lj=7202
@@ -29,20 +28,6 @@ def main():
     with open(gaff_parm_path) as f:
         for line in f:
             data.append(line.strip())
-
-    # Create dict with smarts definitions
-    smarts = {}
-    smarts_tree = ET.parse(smarts_def_path)
-    defs = smarts_tree.getroot()
-    for atype in defs.findall('Definition'):
-        name = atype.get('name')
-        iclass = atype.get('class')
-        idef = atype.get('def')
-        over = atype.get('overrides')
-        desc = atype.get('desc')
-        doi = atype.get('doi')
-        smarts.update({name : [iclass,idef,over,desc,doi]})
-
 
     # Extract gaff parameters
     mass_parms = {x.split()[0]: x.split()[1] for x in data[start_mass:end_mass]}
@@ -60,24 +45,19 @@ def main():
     nonbonded.set('coulomb14scale', '0.833333333')
     nonbonded.set('lj14scale', '0.5')
 
-    for atype in smarts.keys():
-        atomtype = ET.SubElement(atomtypes, 'Type')
-        nb_force = ET.SubElement(nonbonded, 'Atom')
-        atomtype.set('name',atype)
-        iclass=smarts[atype][0]
-        atomtype.set('class',iclass)
-        atomtype.set('element',determine_element(mass_parms[iclass]))
-        atomtype.set('mass',mass_parms[iclass])
-        if smarts[atype][1] is not None:
-            atomtype.set('def',smarts[atype][1])
-            if smarts[atype][2] is not None:
-                atomtype.set('overrides',smarts[atype][2])
-        atomtype.set('desc',smarts[atype][3])
-        atomtype.set('doi',smarts[atype][4])
-        nb_force.set('type',atype)
-        nb_force.set('charge','0.0')
-        nb_force.set('sigma',convert_sigma(lj_parms[iclass][0]))
-        nb_force.set('epsilon',convert_epsilon(lj_parms[iclass][1]))
+    # Atoms/nonbonded (charges set to zero)
+    for atype in mass_parms.keys():
+        atomtype = ET.SubElement(atomtypes, "Type")
+        nb_force = ET.SubElement(nonbonded, "Atom")
+        atomtype.set("name", atype)
+        atomtype.set("class", atype)
+        atomtype.set("element", determine_element(mass_parms[atype]))
+        atomtype.set("mass", mass_parms[atype])
+        atomtype.set("doi", "10.1021/ja9621760")
+        nb_force.set("type", atype)
+        nb_force.set("charge", "0.0")
+        nb_force.set("sigma", convert_sigma(lj_parms[atype][0]))
+        nb_force.set("epsilon", convert_epsilon(lj_parms[atype][1]))
 
     # Bonds
     bond_forces = ET.SubElement(root,'HarmonicBondForce')
@@ -188,7 +168,7 @@ def main():
         name = 'phase' + str(torsion_ctr)
         torsion_force.set(name, convert_theta(parms[1]))
 
-    # Write XML with SMARTS defs
+    # Write XML without SMARTS defs
     ET.ElementTree(root).write(xml_out_path, pretty_print=True)
 
 

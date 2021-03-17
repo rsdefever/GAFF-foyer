@@ -195,7 +195,7 @@ def determine_element(mass):
     elif mass == '126.9':
         element = 'I'
     else:
-        raise ValueError("Invalid element, atype = {}, mass = {}".format(atype,masss))
+        raise ValueError("Invalid element, mass = {}".format(mass))
 
     return element
 

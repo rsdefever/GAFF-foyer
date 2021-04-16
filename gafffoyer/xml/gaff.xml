@@ -1,4 +1,4 @@
-<ForceField>
+<ForceField name="GAFF" version="0.0.1">
   <AtomTypes>
     <Type name="c" class="c" element="C" mass="12.01" def="[C;X3][O&amp;X1,S&amp;X1]" overrides="c2,cc_r5,cc_r6,ce,cv,ca" desc="Sp2 C carbonyl group" doi="10.1002/jcc/20035"/>
     <Type name="c1" class="c1" element="C" mass="12.01" def="[C;X2]" desc="Sp C" doi="10.1002/jcc/20035"/>

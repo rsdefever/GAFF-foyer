@@ -1,4 +1,4 @@
-<ForceField name="GAFF2-nosmarts" version="0.0.1">
+<ForceField name="GAFF-nosmarts" version="0.0.1">
   <AtomTypes>
     <Type name="c" class="c" element="C" mass="12.01" doi="10.1021/ja9621760"/>
     <Type name="c1" class="c1" element="C" mass="12.01" doi="10.1021/ja9621760"/>
